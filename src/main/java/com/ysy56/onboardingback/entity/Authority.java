@@ -13,25 +13,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "table_user")
+@Table(name = "table_authority")
 @Getter
 @NoArgsConstructor
-public class User {
+public class Authority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, unique = true)
-    private String username;
+    private String authorityName;
 
-    @Column(nullable = false)
-    private String passowrd;
-
-    @Column(nullable = false)
-    private String nickname;
-
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "authority")
     private Set<UserAuthority> userAuthoritys = new HashSet<>();
-
 }
