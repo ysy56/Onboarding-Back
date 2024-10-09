@@ -28,4 +28,8 @@ public class UserAuthority {
     @JoinColumn(name = "authority_id", nullable = false)
     private Authority authority;
 
+    public UserAuthority(User user, Authority authority) {
+        this.user = user;
+        this.authority = authority;
+    }
 }
