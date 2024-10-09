@@ -30,4 +30,8 @@ public class Authority {
 
     @OneToMany(mappedBy = "authority", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<UserAuthority> userAuthoritys = new ArrayList<>();
+
+    public Authority(String authorityName) {
+        this.authorityName = authorityName;
+    }
 }
