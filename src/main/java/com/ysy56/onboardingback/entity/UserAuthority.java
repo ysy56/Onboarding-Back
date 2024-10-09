@@ -21,11 +21,11 @@ public class UserAuthority {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "USER_ID")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "AUTHORITY_ID")
+    @JoinColumn(name = "authority_id", nullable = false)
     private Authority authority;
 
 }
