@@ -35,6 +35,6 @@ public class User {
     private String nickname;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<UserAuthority> authorities = new ArrayList<>();
+    private List<UserAuthority> userAuthorities = new ArrayList<>();
 
 }
